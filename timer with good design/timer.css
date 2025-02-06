@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-timer-container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+/*progress-indicator*/
+.circle-container{
+    width: 325px;
+    height: 325px;
+    background-color: #ddd; /* incase of darkmode light mode */
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.semi-circle{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right center;
+}
+
+.semi-circle:nth-child(1) {
+    background-color: #088b8b; /* incase of darkmode light mode */
+    background-color: rgb(48, 206, 0);
+    z-index: 2;
+}
+
+.semi-circle:nth-child(2) {
+    background-color: #088b8b; /* incase of darkmode light mode */
+    background-color: rgb(48, 206, 0);
+    z-index: 3;
+}
+
+.semi-circle:nth-child(3) {
+    background-color: rgb(255, 255, 255);
+    z-index: 4;
+}
+
+.outer-most-circle{
+    width: 290px;
+    height: 290px;
+    background-color: rgb(255, 255, 255) ; /* incase of darkmode light mode */
+    background-color: black;
+    border-radius: 50%;
+    z-index: 5; 
+}
+
+/*timer section*/
+.timer-container{
+    width: 330px;
+    height: 200px;
+    z-index:6;
+}
+
+.timer{
+    width: 300px;
+    height: 500px;
+    color: #ffffff;
+    z-index: 7;
+}
+
+.timer div{
+    font-size: 70px;
+    font-weight: 100;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 0 10px;
+}
+
+.timer .colon {
+    background-color: transparent;
+    width: 10px;
+    margin-left: 0;
+    padding-bottom: 15px;
+}
+
+#actionButton{
+    z-index: 7;
+    position: absolute;
+    top: 650px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: #464444;
+    background-color: transparent;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 2px solid #464444;
+    font-size: 20px;
+    
+    transition: transform 0.3s ease; 
+    transform-origin: center; /* Add this line */
+}
+
+.activebtn{
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .main-timer-container{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        padding-bottom: 200px;
+    }
+
+    #actionButton{
+        z-index: 7;
+        position: absolute;
+        top: 500px; 
+        left: 50%;
+        transform: translateX(-50%);
+        color: #464444;
+        background-color: transparent;
+        padding: 15px 30px;
+        border-radius: 10px;
+        border: 2px solid #464444;
+        font-size: 18px;
+        transition: transform 0.3s ease; 
+        transform-origin: center; /* Add this line */
+    }
+}
