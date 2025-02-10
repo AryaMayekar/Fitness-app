@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit.css">
+    <title>Edit my profile</title>
+</head>
+<body>
+    <div class="edit-contact-main-container">
+      
+        <div class="edit-contact-container">
+            
+            <!-- for first time user -->
+            <!-- <div class="edit-heading">
+                <h1>Personal Details</h1>
+                <hr></hr>
+            </div> -->
+
+            <div class="edit-heading">
+                <h1>Edit My Profile </h1>
+                <hr></hr><!--horizontal line-->
+            </div>
+            
+            <div class="edit-form-info">
+                <form action="">
+                    <div class="editformat">
+                     <label for="firstname">Name</label>
+                     <div class="colons">:</div>
+                     <input type="text" name="firstname" placeholder="Enter your Full Name" class="user-inputs" onkeyup="alphabetonly(this)" required>
+                    </div> 
+                    
+                    <div class="editformat">
+                     <label for="phonenumber">Phone-Number</label>
+                     <div class="colons">:</div>
+                     <input type="tel" name="phone" id="number" placeholder="Your Phone Number" minlength="10" maxlength="10" class="user-inputs" onkeyup="numberonly(this)" required>
+                    </div>
+                    
+                    <div class="editformat">
+                     <label for="dateofbirth">Date-of-Birth</label>
+                     <div class="colons">:</div>
+                     <input type="date" name="dateofbirth" placeholder="Date-of-Birth" class="user-inputs" onkeyup="alphabetonly(this)" required>
+                    </div>
+ 
+                    <div class="editformat">
+                     <label for="gender">Gender</label>
+                     <div class="colons">:</div>
+                     <select id="gender" name="gender" required>
+                         <option value="" disabled selected>Choose an option</option>
+                         <option value="F">Male</option>
+                         <option value="M">Female</option>
+                         <option value="N">Others</option>
+                     </select>
+                    </div>
+                     
+                    <div class="editformat">
+                     <label for="height">Height(in cms)</label>
+                     <div class="colons">:</div>
+                     <input type="number" name="height" placeholder="Enter your Height" id="height" oninput="calculateBMI()" required>
+                    </div>
+                    
+                    <div class="editformat">
+                     <label for="weight">Weight(in kgs)</label>
+                     <div class="colons">:</div>
+                     <input type="number" name="weight" placeholder="Enter your Weight" id="weight" oninput="calculateBMI()" required>
+                    </div>
+                     
+                    <div class="editformat">
+                     <label for="bmi">BMI(Body Mass Index)</label>
+                     <div class="colons">:</div>
+                     <div id="result" class="bmi">--</div>
+                     
+                    </div>
+
+                    <!--ask for first time user-->
+                    <div class="editformat">
+                     <label for="tpquestion">How often do you Exercise in a week?</label>
+                     <div class="colons">:</div>
+                     <select id="exerciseduration" name="exerciseduration" required>
+                         <option value="" disabled selected>Choose an option</option>
+                         <option value="2">Twice a week</option>
+                         <option value="5">Minimum five times a week</option>
+                         <option value="0">Not at all</option>
+                     </select>
+                    </div>
+
+                    <div class="editformat">
+                     <label for="drinkwater">How many Liters of Water do you drink, daily?</label>
+                     <div class="colons">:</div>
+                     <select id="drinkwater" name="drinkwater" required>
+                         <option value="" disabled selected>Choose an option</option>
+                         <option value="2">Atmost 2 Liters</option>
+                         <option value="3">Between 3 Liters to 4 Liters</option>
+                         <option value="5">Atleast 5 Liters</option>
+                     </select>
+                    </div>
+
+                    <div class="editformat">
+                     <label for="jogtime">How many minutes can you jog comfortably?</label>
+                     <div class="colons">:</div>
+                     <select id="jogtime" name="jogtime" required>
+                         <option value="" disabled selected>Choose an option</option>
+                         <option value="10">10 mins</option>
+                         <option value="20">20 mins</option>
+                         <option value="0">Dont know the exact time</option>
+                     </select>
+                    </div>
+
+                    <div class="editformat">
+                     <!--yeh niche vala store karna hai-->
+                     <label for="goals">What are your Fitness Goals?</label>
+                     <div class="colons">:</div>
+                     <select id="goals" name="goals" required>
+                         <option value="" disabled selected>Choose an option</option>
+                         <option value="loose weight">Loose body weight</option>
+                         <option value="shredded body">Shredded body</option>
+                         <option value="bulk body">Bulk body</option>
+                     </select>
+                    </div>
+ 
+                    <div class="editformat">
+                     <label for="exerciselevel">What is your current exercise level?</label>
+                     <div class="colons">:</div>
+                     <select id="exerciseLevel" name="exerciseLevel" required>
+                         <option value="" disabled selected>Choose an option</option>
+                         <option value="beginner">Beginner</option>
+                         <option value="intermediate">Intermediate</option>
+                         <option value="advanced">Advanced</option>
+                     </select>
+                    </div>
+                
+                    <div class="btns">
+                     <button type="submit" class="sbutton">Submit</button>
+                    </div>
+                </form>
+            </div>
+        
+        </div>
+
+    </div>  
+    
+    <script src="edit.js"></script>
+</body>
+</html>
