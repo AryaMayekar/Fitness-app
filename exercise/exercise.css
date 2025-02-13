@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.exercise-main-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.exercise-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: yellow;
+}
+
+.dash-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.dash {
+    width: 20%;
+    border: 5px solid #767575;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.dash.active {
+    border: 5px solid #ffffff;
+}
+
+.gif-box {
+    width: 50%;
+    height: 60%;
+    background-color: green;
+    margin: 5px;
+}
+
+.full-screen-video {
+    width: 100%;
+    height: 100%;
+}
+
+.rest-time-container {
+    width: 100%;
+    height: 40%;
+}
+
+.next-exercise-info {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #088b8b;
+}
+
+/* progressbar time */
+.time {
+    font-size: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.colonp {
+    font-size: 30px;
+    width: 10px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+}
+
+.repsinfo{
+   font-size: 38px;
+   display: none;
+}
+
+.next-exercise-info h1 {
+    font-size: 48px;
+}
+
+.info-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-box img {
+    margin-left: 5px;
+    height: 29px;
+    width: 29px;
+    cursor: pointer;
+}
+
+.next-exercise-name {
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.ongoingrestthings {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+}
+
+.left-arrow-div {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-arrow-div img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+/* buttons vala section for rep exercises */
+.main-button-container{
+    width: 80%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.donebtn{
+    width: 70%;
+    height: 20%;
+    background-color: black;
+    color: white; /* White text add this if dark light mode*/
+    font-size: 22px; /* Font size */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin: 0 10px; /* Spacing between buttons */
+}
+
+.donebtn:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+/* timercss */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-timer-container {
+    width: 80%;
+    height: 100%;
+    background-color: black;
+}
+
+/*progress-indicator*/
+.circle-container {
+    width: 200px;
+    height: 200px;
+    background-color: #ddd; /* incase of darkmode light mode */
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.semi-circle {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right center;
+}
+
+.semi-circle:nth-child(1) {
+    background-color: #088b8b; /* incase of darkmode light mode */
+    background-color: rgb(48, 206, 0);
+    z-index: 2;
+}
+
+.semi-circle:nth-child(2) {
+    background-color: #088b8b; /* incase of darkmode light mode */
+    background-color: rgb(48, 206, 0);
+    z-index: 3;
+}
+
+.semi-circle:nth-child(3) {
+    background-color: rgb(255, 255, 255);
+    z-index: 4;
+}
+
+.outer-most-circle {
+    width: 170px;
+    height: 170px;
+    background-color: rgb(255, 255, 255); /* incase of darkmode light mode */
+    background-color: black;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.timer-container {
+    width: 130px;
+    height: 100px;
+    z-index: 6;
+}
+
+.timer {
+    width: 100px;
+    height: 100px;
+    color: #ffffff;
+    z-index: 7;
+}
+
+.timer div {
+    font-size: 80px;
+    font-weight: 100;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px 0 5px;
+}
+
+.main-progress-container {
+    width: 80%;
+    height: 100%;
+    background-color: rgb(242, 233, 233);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-container {
+    width: 80%;
+    height: 20%;
+    background-color: blue;
+    border-radius: 40px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    border: none;
+    border-radius: 40px;
+    background-color: #4caf50;
+    transition: width 0.1s linear;
+    cursor: pointer;
+}
+
+.pausebtn, .playbtn {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    /* background-color: green; */
+}
+
+.playbtn {
+    display: none; /* Initially hidden */
+}
+
+.right-arrow-div {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-arrow-div img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.full-screen-video {
+    height: 100%;
+    width: 100%;
+}
+
+.instruction-main-container {
+    position: fixed; /* Fixed position to cover the whole screen */
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    z-index: 999; /* Ensure it is on top of other elements */
+    display: none;
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center the content */
+}
+
+.instruction-container {
+    height: 50%;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tpcontainer {
+    width: 90%;
+}
+
+.instruction-headings {
+    font-size: 30px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.line {
+    width: 80%;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.instructionlist {
+    font-size: 22px;
+    font-weight: 500;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#close {
+    width: 80%;
+    height: 20%;
+    background-color: black;
+    color: white; /* White text add this if dark light mode*/
+    font-size: 16px; /* Font size */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin: 0 10px; /* Spacing between buttons */
+}
+
+#close:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.resttime-main-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.restime-containerf{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: yellow;
+}
+
+.addtimebtns{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+}
+
+.plussecs{
+    width: 40%;
+    height: 20%;
+    background-color: black;
+    color: white; /* White text add this if dark light mode*/
+    font-size: 16px; /* Font size */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin: 0 10px; /* Spacing between buttons */
+}
+
+.plussecs:hover{
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.samay{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
